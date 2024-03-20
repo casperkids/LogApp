@@ -30,7 +30,7 @@
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: auto;
   align-items: center;
   height: 100vh; /* Adjust the height according to your preference */
 }
