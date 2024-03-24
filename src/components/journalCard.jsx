@@ -8,14 +8,14 @@ export default function JournalCard({ journal }) {
   return (
     <div className='logList'>
       <Card style={{ width: '18rem' }}>
-        <img src={journal.roboIcon} alt={journal.id} style={{ maxWidth: '40%' }} />
+        <img src={journal.roboIconSrc} alt={journal.id} style={{ maxWidth: '40%' }} />
         <Card.Body>
           <Card.Title>{journal.title}</Card.Title>
           <p>Date: {journal.date}</p>
           <Card.Text>{journal.note}</Card.Text>
           <div>
-            <Button variant="secondary" size="sm">Edit</Button>
-            <Button variant="secondary" size="sm">Delete</Button>
+            <Button variant="secondary" size="sm">more</Button>
+            {/* <Button variant="secondary" size="sm">Delete</Button> */}
           </div>
         </Card.Body>
       </Card>
