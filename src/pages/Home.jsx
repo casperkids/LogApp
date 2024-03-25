@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 import JournalCard from "../components/journalCard.jsx";
+import  ActivityCalendar  from "react-activity-calendar";
 
 const Home = ({
   currentDate,
@@ -79,6 +80,11 @@ const Home = ({
           ))}
         </div>
       </div>
+
+      <ActivityCalendar fontSize={20}
+        blockSize={22}
+        blockRadius={7} data={[]} showWeekdayLabels={true} />
+
     </section>
   );
 };
