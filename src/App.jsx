@@ -76,7 +76,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/LogApp">
       <nav>NavBar</nav>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
