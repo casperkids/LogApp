@@ -3,7 +3,7 @@ export const journals = [
     id: '1710874611',
     title: 'Oranienstraße named among top 30 coolest streets in the world',
     date: '202303018',
-    note: 'Berlin’s Oranienstraße, which stretches from Mitte into the heart of Kreuzberg, has been named one of the coolest streets in the world by TimeOut.',
+    note: 'Berlins Oranienstraße, which stretches from Mitte into the heart of Kreuzberg, has been named one of the coolest streets in the world by TimeOut.',
     roboIconSrc: 'https://robohash.org/Oranienstraße named among top 30 coolest streets in the world'
     },
     {
