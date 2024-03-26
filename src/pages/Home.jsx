@@ -37,11 +37,14 @@ const Home = ({
     });
   };
 
-  const data = selectLastHalfYear(journals).map((journal) => ({
-    date: journal.date,
-    count: 1,
-    level: 2,
-  }));
+  const data = selectLastHalfYear(journals)
+    .map((journal) => ({
+      date: journal.date,
+      count: 1,
+      level: 2,
+    }))
+    .reverse();
+  console.log(data);
 
   return (
     <section className="section">

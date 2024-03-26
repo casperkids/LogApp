@@ -1,5 +1,26 @@
 export const journals = [
-    {
+          {
+      id: '1709492211',
+      title: 'Extra Fresh!!',
+      date: '2024-03-15',
+      note: 'Dose aus 30%.',
+      roboIconSrc: 'https://robohash.org/extrafresh'
+    },  
+        {
+      id: '1709492211',
+      title: 'Extra Fresh!!',
+      date: '2024-03-08',
+      note: 'Dose aus 30%.',
+      roboIconSrc: 'https://robohash.org/extrafresh'
+    },  
+      {
+      id: '1709492211',
+      title: 'Extra Fresh!!',
+      date: '2024-03-07',
+      note: 'Dose aus 30%.',
+      roboIconSrc: 'https://robohash.org/extrafresh'
+    },  
+  {
     id: '1710874611',
     title: 'Oranienstraße named among top 30 coolest streets in the world',
     date: '2024-03-06',
@@ -52,6 +73,41 @@ export const journals = [
       id: '1710532415',
       title: 'First log',
       date: '2024-03-01',
+      note: 'Journal log simply records my footsteps.',
+      roboIconSrc: 'https://robohash.org/firstlog'
+    },
+    {
+      id: '1710532415',
+      title: 'First log',
+      date: '2024-02-01',
+      note: 'Journal log simply records my footsteps.',
+      roboIconSrc: 'https://robohash.org/firstlog'
+    },
+        {
+      id: '1710532415',
+      title: 'First log',
+      date: '2024-02-15',
+      note: 'Journal log simply records my footsteps.',
+      roboIconSrc: 'https://robohash.org/firstlog'
+    },
+            {
+      id: '1710532415',
+      title: 'First log',
+      date: '2024-01-15',
+      note: 'Journal log simply records my footsteps.',
+      roboIconSrc: 'https://robohash.org/firstlog'
+    },
+                {
+      id: '1710532415',
+      title: 'First log',
+      date: '2024-01-15',
+      note: 'Journal log simply records my footsteps.',
+      roboIconSrc: 'https://robohash.org/firstlog'
+    },
+                {
+      id: '1710532415',
+      title: 'First log',
+      date: '2024-01-15',
       note: 'Journal log simply records my footsteps.',
       roboIconSrc: 'https://robohash.org/firstlog'
     },
