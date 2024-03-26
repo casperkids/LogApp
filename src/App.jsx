@@ -23,11 +23,11 @@ function App() {
   const [showSingleJournal, setShowSingleJournal] = useState(false);
   const [selectedJournal, setSelectedJournal] = useState(null);
 
-  // "See More" click
-  const handleSeeMoreClick = (journal) => {
-    setSelectedJournal(journal);
-    setShowSingleJournal(true);
-  };
+  // // "See More" click
+  // const handleSeeMoreClick = (journal) => {
+  //   setSelectedJournal(journal);
+  //   setShowSingleJournal(true);
+  // };
 
   const generateRoboIcon = () => {
     const input = encodeURIComponent(title);

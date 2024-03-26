@@ -1,7 +1,8 @@
 import { Link, Outlet } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 import JournalCard from "../components/journalCard.jsx";
-import  ActivityCalendar  from "react-activity-calendar";
+import { journals } from "../data/logsData.js";
+import ActivityCalendar from "react-activity-calendar";
 
 const Home = ({
   currentDate,
@@ -14,12 +15,46 @@ const Home = ({
   roboIcon,
   handleButtonClick,
   setRoboIcon,
-  journals,
 }) => {
   const topJournals = journals.slice(0, 4);
+
+  //calender
+
+  const selectLastHalfYear = (contributions) => {
+    const currentYear = new Date().getFullYear();
+    const currentMonth = new Date().getMonth();
+    const shownMonths = 6;
+
+    return contributions.filter((activity) => {
+      const date = new Date(activity.date);
+      const monthOfDay = date.getMonth();
+
+      return (
+        date.getFullYear() === currentYear &&
+        monthOfDay > currentMonth - shownMonths &&
+        monthOfDay <= currentMonth
+      );
+    });
+  };
+
+  const data = selectLastHalfYear(journals).map((journal) => ({
+    date: journal.date,
+    count: 1,
+    level: 2,
+  }));
+
   return (
     <section className="section">
       <h2>HOME ROUTE Page</h2>
+      <ActivityCalendar
+        fontSize={20}
+        blockSize={22}
+        blockRadius={7}
+        data={data}
+        showWeekdayLabels={true}
+        showMonthLabels={true}
+      />
+
       <div className="centered-form form-container">
         <Form onSubmit={(event) => handleAddJournal(event)}>
           <div className="form-group">
@@ -80,11 +115,6 @@ const Home = ({
           ))}
         </div>
       </div>
-
-      <ActivityCalendar fontSize={20}
-        blockSize={22}
-        blockRadius={7} data={[]} showWeekdayLabels={true} />
-
     </section>
   );
 };
