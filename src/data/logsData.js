@@ -1,27 +1,27 @@
 export const journals = [
               {
-      id: '1709492211',
+      id: '1709492213',
       title: 'Extra Fresh!!',
       date: '2024-03-18',
       note: 'Dose aus 30%.',
       roboIconSrc: 'https://robohash.org/extrafresh'
     },  
             {
-      id: '1709492211',
+      id: '17094922525',
       title: 'Extra Fresh!!',
       date: '2024-03-17',
       note: 'Dose aus 30%.',
       roboIconSrc: 'https://robohash.org/extrafresh'
     },  
           {
-      id: '1709492211',
+      id: '1709492281',
       title: 'Extra Fresh!!',
       date: '2024-03-15',
       note: 'Dose aus 30%.',
       roboIconSrc: 'https://robohash.org/extrafresh'
     },  
         {
-      id: '1709492211',
+      id: '1709492881',
       title: 'Extra Fresh!!',
       date: '2024-03-08',
       note: 'Dose aus 30%.',
@@ -112,21 +112,21 @@ export const journals = [
       roboIconSrc: 'https://robohash.org/firstlog'
     },
                 {
-      id: '1710532415',
+      id: '1710532515',
       title: 'First log',
       date: '2024-01-15',
       note: 'Journal log simply records my footsteps.',
       roboIconSrc: 'https://robohash.org/firstlog'
     },
                 {
-      id: '1710532415',
+      id: '1710532418',
       title: 'First log',
       date: '2024-01-15',
       note: 'Journal log simply records my footsteps.',
       roboIconSrc: 'https://robohash.org/firstlog'
     },
                     {
-      id: '1710532415',
+      id: '1710532417',
       title: 'First log',
       date: '2024-01-11',
       note: 'Journal log simply records my footsteps.',
