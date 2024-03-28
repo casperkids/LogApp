@@ -3,7 +3,7 @@ import JournalCard from "../components/journalCard.jsx";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 
-const JOURNALS_PER_PAGE = 3;
+const JOURNALS_PER_PAGE = 10;
 
 const Logs = ({ journals }) => {
   const [currentPage, setCurrentPage] = useState(1);

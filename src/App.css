@@ -4,6 +4,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+ --react-tooltip-background: red;
+
 }
 .title {
   font-family: "Kode Mono", monospace;

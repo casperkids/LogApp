@@ -1,8 +1,11 @@
+import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 import JournalCard from "../components/journalCard.jsx";
 import { journals } from "../data/logsData.js";
 import ActivityCalendar from "react-activity-calendar";
+import { Tooltip as ReactTooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 const Home = ({
   currentDate,
@@ -15,11 +18,11 @@ const Home = ({
   roboIcon,
   handleButtonClick,
   setRoboIcon,
+  journals,
 }) => {
   const topJournals = journals.slice(0, 4);
 
   //calender
-
   const selectLastHalfYear = (contributions) => {
     const currentYear = new Date().getFullYear();
     const currentMonth = new Date().getMonth();
@@ -40,24 +43,27 @@ const Home = ({
   const data = selectLastHalfYear(journals)
     .map((journal) => ({
       date: journal.date,
-      count: 1,
+      count: 1, //count??
       level: 2,
     }))
     .reverse();
-  console.log(data);
 
   return (
     <section className="section">
       <h2>HOME ROUTE Page</h2>
       <ActivityCalendar
         fontSize={20}
-        blockSize={22}
-        blockRadius={7}
+        blockSize={25}
+        blockRadius={6}
         data={data}
         showWeekdayLabels={true}
-        showMonthLabels={true}
+        renderBlock={(block, activity) =>
+          React.cloneElement(block, {
+            "data-tooltip-id": "react-tooltip",
+            "data-tooltip-html": `${activity.count} activities on ${activity.date}`,
+          })
+        }
       />
-
       <div className="centered-form form-container">
         <Form onSubmit={(event) => handleAddJournal(event)}>
           <div className="form-group">
@@ -117,6 +123,7 @@ const Home = ({
             <JournalCard key={topJournal.id} journal={topJournal} />
           ))}
         </div>
+        <ReactTooltip id="react-tooltip" />
       </div>
     </section>
   );

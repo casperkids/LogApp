@@ -23,12 +23,6 @@ function App() {
   const [showSingleJournal, setShowSingleJournal] = useState(false);
   const [selectedJournal, setSelectedJournal] = useState(null);
 
-  // // "See More" click
-  // const handleSeeMoreClick = (journal) => {
-  //   setSelectedJournal(journal);
-  //   setShowSingleJournal(true);
-  // };
-
   const generateRoboIcon = () => {
     const input = encodeURIComponent(title);
     // const img = document.createElement('img')
@@ -67,6 +61,8 @@ function App() {
     };
     // Update the journals array with the new entry
     setJournals((prevJournals) => [newJournal, ...prevJournals]);
+
+    localStorage.setItem("journals", JSON.stringify([newJournal, ...journals]));
 
     // Reset form fields
     setNote("");
