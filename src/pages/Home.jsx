@@ -51,9 +51,10 @@ const Home = ({
   return (
     <section className="section">
       <h2>HOME ROUTE Page</h2>
+
       <ActivityCalendar
         fontSize={20}
-        blockSize={25}
+        blockSize={20}
         blockRadius={6}
         data={data}
         showWeekdayLabels={true}
