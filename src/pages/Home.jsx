@@ -50,21 +50,22 @@ const Home = ({
 
   return (
     <section className="section">
-      <h2>HOME ROUTE Page</h2>
+      <div>
+        <ActivityCalendar
+          fontSize={20}
+          blockSize={20}
+          blockRadius={6}
+          data={data}
+          showWeekdayLabels={true}
+          renderBlock={(block, activity) =>
+            React.cloneElement(block, {
+              "data-tooltip-id": "react-tooltip",
+              "data-tooltip-html": `${activity.count} activities on ${activity.date}`,
+            })
+          }
+        />
+      </div>
 
-      <ActivityCalendar
-        fontSize={20}
-        blockSize={20}
-        blockRadius={6}
-        data={data}
-        showWeekdayLabels={true}
-        renderBlock={(block, activity) =>
-          React.cloneElement(block, {
-            "data-tooltip-id": "react-tooltip",
-            "data-tooltip-html": `${activity.count} activities on ${activity.date}`,
-          })
-        }
-      />
       <div className="centered-form form-container">
         <Form onSubmit={(event) => handleAddJournal(event)}>
           <div className="form-group">

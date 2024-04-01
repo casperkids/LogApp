@@ -50,7 +50,7 @@ function App() {
 
     // Epoch timestamp
     const timestamp = new Date().getTime();
-    setDate(currentDate);
+    const currentDate = new Date().toISOString().split("T")[0];
 
     const newJournal = {
       id: timestamp.toString(),
