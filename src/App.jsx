@@ -20,8 +20,14 @@ function App() {
   const [date, setDate] = useState("");
   const [journals, setJournals] = useState(defaultJournals);
 
-  const [showSingleJournal, setShowSingleJournal] = useState(false);
-  const [selectedJournal, setSelectedJournal] = useState(null);
+  const updateJournal = (updatedJournal) => {
+    const updatedJournals = journals.map((journal) =>
+      journal.id === updatedJournal.id ? updatedJournal : journal
+    );
+    setJournals(updatedJournals);
+  };
+  // const [showSingleJournal, setShowSingleJournal] = useState(false);
+  // const [selectedJournal, setSelectedJournal] = useState(null);
 
   const generateRoboIcon = () => {
     const input = encodeURIComponent(title);
@@ -96,31 +102,18 @@ function App() {
           <Route path="logs" element={<Logs journals={journals} />} />
           <Route
             path="logs/:journalId"
-            element={<SingleJournal journals={journals} />}
+            element={
+              <SingleJournal
+                journals={journals}
+                updateJournal={updateJournal}
+              />
+            }
           />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
       <footer></footer>
     </BrowserRouter>
-
-    // <div className="container">
-
-    //   <div>
-    //     <h5>Journal Entries</h5>
-    //     {currentJournals.map(journal => (<JournalCard key={journal.id} journal={journal} onSeeMoreClick={handleSeeMoreClick} />
-    //     ))}
-    //   </div>
-    //   <div className="pagination">
-    //     <Button onClick={prevPage} disabled={currentPage === 1}>
-    //       Previous Page
-    //     </Button>
-    //     <Button onClick={nextPage} disabled={endIndex >= journals.length}>
-    //       Next Page
-    //     </Button>
-    //     {showSingleJournal && <SingleJournal journal={selectedJournal} />}
-    // </div>
-    // </div>
   );
 }
 export default App;

@@ -1,16 +1,44 @@
-
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
  --react-tooltip-background: red;
-
+}
+.navbar {
+  font-family: "Kode Mono", monospace;
+  display: flex;
+  justify-content: center;
 }
 .title {
   font-family: "Kode Mono", monospace;
   font-weight: 400;
   font-style: normal;
+  color: #49514d;
+}
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 999;
+}
+
+.titlediv {
+  padding-top: 20px;
+}
+.calender_container{
+  font-family: "Kode Mono", monospace;
+  width: 600px;
+  border: 1px solid#f8a13a;
+  margin-top: 150px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.activity-title{
+  padding-bottom: 15px;
+  color:#f8a13a ;
 }
 
 .container {
@@ -20,8 +48,8 @@
   padding-bottom : 70px;
 }
 .form-container {
-  border: 1px solid #ccc; 
-  padding: 20%; 
+  background-color:#b9b087; 
+  padding: 5%; 
 }
 
 
@@ -30,31 +58,21 @@
 }
 
 
-
-/* .container {
-  display: flex;
-  justify-content: auto;
-  align-items: center;
-  height: 100vh;
-  padding-bottom : 70px;
-} */
-
 .form-group {
-  font-family: "M PLUS 1 Code", monospace;
+  font-family: "Kode Mono", monospace;
   font-weight:200;
   font-style: normal;
+  padding-bottom: 20px;
 }
 
-
-.centered-form {
-  width: 300px; 
-}
 
 .centered-form .form-group {
   display: block;
   margin-bottom: 15px;
-}
+  width: 540px;
+  margin: 0 auto;
 
+}
 /* Style for placeholder text */
 .centered-form textarea {
   width: 100%; 
@@ -70,4 +88,7 @@
 }
 .centeredDate{
   text-align: center; /* Center text horizontally */
+}
+.section{
+  margin-top: 150px;
 }

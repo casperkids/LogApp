@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import JournalCard from "../components/journalCard.jsx";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 
-const JOURNALS_PER_PAGE = 10;
+const JOURNALS_PER_PAGE = 12;
 
 const Logs = ({ journals }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,20 +22,66 @@ const Logs = ({ journals }) => {
 
   return (
     <section className="section">
-      <h2>LOGS</h2>
-      <div className="log-list">
+      <div className="log-list" style={{ display: "flex", flexWrap: "wrap" }}>
         {currentJournals.map((journal) => (
-          <div key={journal.id}>
-            <p>Date: {journal.date}</p>
-            <Link to={`/logs/${journal.id}`}>more info</Link>
-          </div>
+          <Card
+            key={journal.id}
+            style={{
+              width: "calc(25% - 20px)",
+              margin: "8px",
+            }}
+          >
+            <Card.Text>{journal.date}</Card.Text>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                minHeight: "10vh",
+              }}
+            >
+              <Card.Img
+                variant="top"
+                src={journal.roboIconSrc}
+                alt={journal.id}
+                style={{
+                  width: "100px",
+                  height: "100px",
+                  borderRadius: "50%",
+                  border: "1px solid  #808080",
+                  display: "block",
+                  margin: "0 auto",
+                }}
+              />
+            </div>
+            <Card.Body>
+              <Card.Title>{journal.title}</Card.Title>
+              {/* <Card.Text>{journal.note}</Card.Text> */}
+              {/* <Button variant="secondary" size="sm">
+                Delete
+              </Button>
+              <Button variant="secondary" size="sm">
+                Save
+              </Button> */}
+            </Card.Body>
+            <div>
+              <Link to={`/logs/${journal.id}`}>More info</Link>{" "}
+            </div>
+          </Card>
         ))}
       </div>
-      <div className="pagination">
+      <div
+        className="pagination"
+        style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}
+      >
         <Button onClick={prevPage} disabled={currentPage === 1}>
           Previous Page
         </Button>
-        <Button onClick={nextPage} disabled={endIndex >= journals.length}>
+        <Button
+          onClick={nextPage}
+          disabled={endIndex >= journals.length}
+          style={{ marginLeft: "10px" }}
+        >
           Next Page
         </Button>
       </div>

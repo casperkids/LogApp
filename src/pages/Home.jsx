@@ -50,9 +50,10 @@ const Home = ({
 
   return (
     <section className="section">
-      <div>
+      <div className="calender_container">
+        <h3 className="activity-title">Your Activities</h3>
         <ActivityCalendar
-          fontSize={20}
+          fontSize={18}
           blockSize={20}
           blockRadius={6}
           data={data}
@@ -69,10 +70,10 @@ const Home = ({
       <div className="centered-form form-container">
         <Form onSubmit={(event) => handleAddJournal(event)}>
           <div className="form-group">
-            <label>date</label>
+            <label>Date</label>
             <div>
               <input
-                className="centeredDate"
+                className="centeredDate form-control"
                 type="text"
                 value={currentDate}
                 onChange={(event) => setDate(event.target.value)}
@@ -84,8 +85,9 @@ const Home = ({
           <div className="form-group">
             <label>Write about your day</label>
             <div>
-              <Form.Control
-                as="textarea"
+              <textarea
+                className="form-control"
+                style={{ width: "100%" }}
                 rows={10}
                 value={note}
                 onChange={(event) => setNote(event.target.value)}
@@ -97,36 +99,48 @@ const Home = ({
 
           <div className="form-group">
             <label>Title of your day</label>
-            <div>
+            <div className="d-flex align-items-center">
               <input
+                className="form-control flex-grow-1"
                 type="text"
                 value={title}
                 onChange={(event) => setTitle(event.target.value)}
+                required
               />
-              <div>
-                <Button
-                  onClick={handleButtonClick}
-                  onChange={(event) => setRoboIcon(event.target.value)}
+              <div className="ml-2">
+                <div
+                  style={{ width: "100%" }}
+                  className="d-flex align-items-center"
                 >
-                  Generate Robot
-                </Button>
-                {roboIcon && <img src={roboIcon} alt="todaysRoboIcon" />}
+                  {title.trim() && (
+                    <Button
+                      onClick={handleButtonClick}
+                      variant="secondary"
+                      style={{ marginRight: "5px" }}
+                    >
+                      Generate Robot
+                    </Button>
+                  )}
+                  {roboIcon && (
+                    <img className="ml-2" src={roboIcon} alt="todaysRoboIcon" />
+                  )}
+                </div>
               </div>
             </div>
           </div>
-          <Button variant="primary" type="submit">
+          <Button className="mt-3" variant="primary" type="submit">
             Create Log!
           </Button>
         </Form>
-
-        <div>
-          <h5>Journal Entries</h5>
-          {topJournals.map((topJournal) => (
-            <JournalCard key={topJournal.id} journal={topJournal} />
-          ))}
-        </div>
-        <ReactTooltip id="react-tooltip" />
       </div>
+
+      <div>
+        <h5>Journal Entries</h5>
+        {topJournals.map((topJournal) => (
+          <JournalCard key={topJournal.id} journal={topJournal} />
+        ))}
+      </div>
+      <ReactTooltip id="react-tooltip" />
     </section>
   );
 };

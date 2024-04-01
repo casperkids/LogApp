@@ -1,4 +1,11 @@
 export const journals = [
+      {
+      id: '1711810267',
+      title: 'Read Me',
+      date: '2024-03-20',
+      note: 'arning: branch.main.remote has multiple values',
+      roboIconSrc: 'https://robohash.org/enoughpoints'
+    }, 
     {
       id: '1710799806',
       title: 'enough points',
