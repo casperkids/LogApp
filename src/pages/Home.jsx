@@ -20,7 +20,7 @@ const Home = ({
   setRoboIcon,
   journals,
 }) => {
-  const topJournals = journals.slice(0, 4);
+  const topJournals = journals.slice(0, 3);
 
   //calender
   const selectLastHalfYear = (contributions) => {
@@ -88,7 +88,7 @@ const Home = ({
               <textarea
                 className="form-control"
                 style={{ width: "100%" }}
-                rows={10}
+                rows={5}
                 value={note}
                 onChange={(event) => setNote(event.target.value)}
                 placeholder="What did you do today?&#10;What was your emotional experience?"
@@ -115,30 +115,47 @@ const Home = ({
                   {title.trim() && (
                     <Button
                       onClick={handleButtonClick}
-                      variant="secondary"
-                      style={{ marginRight: "5px" }}
+                      variant="light"
+                      style={{ margin: "15px" }}
                     >
                       Generate Robot
                     </Button>
                   )}
-                  {roboIcon && (
-                    <img className="ml-2" src={roboIcon} alt="todaysRoboIcon" />
-                  )}
                 </div>
               </div>
             </div>
+            <div>
+              {roboIcon && (
+                <img
+                  className="ml-2"
+                  src={roboIcon}
+                  alt="todaysRoboIcon"
+                  style={{
+                    // width: "100px",
+                    // height: "100px",
+                    backgroundColor: "white",
+                    borderRadius: "50%",
+                    // border: "1px solid  #808080",
+                    display: "block",
+                    margin: "0 auto",
+                  }}
+                />
+              )}
+            </div>
           </div>
-          <Button className="mt-3" variant="primary" type="submit">
+          <Button className="mt-3" variant="light" type="submit">
             Create Log!
           </Button>
         </Form>
       </div>
 
-      <div>
-        <h5>Journal Entries</h5>
-        {topJournals.map((topJournal) => (
-          <JournalCard key={topJournal.id} journal={topJournal} />
-        ))}
+      <div className="recent-entry-container">
+        <h5>Recent Entries</h5>
+        <div className="d-flex justify-content-between">
+          {topJournals.map((topJournal) => (
+            <JournalCard key={topJournal.id} journal={topJournal} />
+          ))}
+        </div>
       </div>
       <ReactTooltip id="react-tooltip" />
     </section>

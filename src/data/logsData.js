@@ -4,13 +4,13 @@ export const journals = [
       title: 'Read Me',
       date: '2024-03-20',
       note: 'arning: branch.main.remote has multiple values',
-      roboIconSrc: 'https://robohash.org/enoughpoints'
+      roboIconSrc: 'https://robohash.org/readme'
     }, 
     {
       id: '1710799806',
       title: 'enough points',
       date: '2024-03-19',
-      note: 'Miles at smart ﻿no marry whole linen mr.',
+      note: 'Miles at smart no marry whole linen mr.',
       roboIconSrc: 'https://robohash.org/enoughpoints'
     }, 
     {
@@ -39,7 +39,7 @@ export const journals = [
       title: 'offending',
       date: '2024-03-18',
       note: 'Estate was tended ten boy nearer seemed.',
-      roboIconSrc: 'https://robohash.org/breakfast'
+      roboIconSrc: 'https://robohash.org/offending'
     }, 
     {
       id: '1710735006',
@@ -78,10 +78,10 @@ export const journals = [
     },  
   {
     id: '1709683806',
-    title: 'Oranienstraße named among top 30 coolest streets in the world',
+    title: '30 coolest streets in the world',
     date: '2024-03-06',
     note: 'Berlins Oranienstraße, which stretches from Mitte into the heart of Kreuzberg, has been named one of the coolest streets in the world by TimeOut.',
-    roboIconSrc: 'https://robohash.org/Oranienstraße named among top 30 coolest streets in the world'
+    roboIconSrc: 'https://robohash.org/30 coolest streets in the world'
     },
     {
     id: ' 1709716206',
@@ -112,14 +112,14 @@ export const journals = [
       roboIconSrc: 'https://robohash.org/streikberlin'
     },
     {
-      id: '1711602606',
+      id: '1709376733',
       title: 'Happy Birthday!!',
       date: '2024-03-04',
       note: 'So heres to another year of laughter, love, and endless possibilities. Heres to embracing every moment, cherishing every memory, and living life to the fullest.',
       roboIconSrc: 'https://robohash.org/happybirthday'
     },
     {
-      id: '1711602606',
+      id: '1709405533',
       title: 'Extra Fresh!!',
       date: '2024-03-02',
       note: 'Fruit two match men you seven share. ',
@@ -197,10 +197,10 @@ export const journals = [
     },
     {
       id: '1703715006',
-      title: 'calender',
+      title: 'Balck Beans',
       date: '2024-01-09',
       note: 'Excepteur sint occaecat cupidatat non proident',
-      roboIconSrc: 'https://robohash.org/calender'
+      roboIconSrc: 'https://robohash.org/Balck Beans'
     }
 
   ]

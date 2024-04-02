@@ -14,7 +14,7 @@ const StyledNavbar = () => {
       <NavLink
         to="/"
         style={({ isActive }) => {
-          return { color: isActive ? "red" : "grey", marginRight: "20px" };
+          return { color: isActive ? "#f8a13a" : "grey", marginRight: "20px" };
         }}
       >
         Home
@@ -22,7 +22,7 @@ const StyledNavbar = () => {
       <NavLink
         to="/logs"
         style={({ isActive }) => {
-          return { color: isActive ? "red" : "grey", marginRight: "20px" };
+          return { color: isActive ? "#f8a13a" : "grey", marginRight: "20px" };
         }}
       >
         Logs

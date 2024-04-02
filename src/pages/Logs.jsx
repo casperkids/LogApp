@@ -53,19 +53,7 @@ const Logs = ({ journals }) => {
                   margin: "0 auto",
                 }}
               />
-            </div>
-            <Card.Body>
-              <Card.Title>{journal.title}</Card.Title>
-              {/* <Card.Text>{journal.note}</Card.Text> */}
-              {/* <Button variant="secondary" size="sm">
-                Delete
-              </Button>
-              <Button variant="secondary" size="sm">
-                Save
-              </Button> */}
-            </Card.Body>
-            <div>
-              <Link to={`/logs/${journal.id}`}>More info</Link>{" "}
+              <Link to={`/logs/${journal.id}`}>{journal.title}</Link>{" "}
             </div>
           </Card>
         ))}

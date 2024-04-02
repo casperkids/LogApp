@@ -40,6 +40,10 @@
   padding-bottom: 15px;
   color:#f8a13a ;
 }
+.recent-entry-container {
+
+  padding: 70px;
+}
 
 .container {
   display: flex;
@@ -91,4 +95,12 @@
 }
 .section{
   margin-top: 150px;
+  font-family: "Kode Mono", monospace;
+}
+.edit-save-btn{
+margin-left: 10px;
+}
+.success_txt{
+  color: #f8a13a;
+  padding-top: 20px;
 }
