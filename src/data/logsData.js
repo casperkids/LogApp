@@ -139,13 +139,6 @@ export const journals = [
       note: 'Affronting discretion as do is announcing.',
       roboIconSrc: 'https://robohash.org/Sincerity'
     },
-    {
-      id: '1706764206',
-      title: 'Satisfied',
-      date: '2024-02-01',
-      note: 'Satisfied conveying an dependent contented',
-      roboIconSrc: 'https://robohash.org/satisfied'
-    },
         {
       id: '1707973806',
       title: 'direct two men',
@@ -167,6 +160,13 @@ export const journals = [
       note: 'Excepteur sint occaecat cupidatat non proident',
       roboIconSrc: 'https://robohash.org/calender'
     },
+            {
+      id: '1706997133',
+      title: 'Musiker und Entertainer Olli Schulz',
+      date: '2024-02-03',
+      note: 'An der Comedy wäre ich auf Dauer zerbrochen',
+      roboIconSrc: 'https://robohash.org/Musiker und Entertainer Olli Schulz'
+    }, 
         {
       id: '1706986333',
       title: 'Demo in Berlin:',
@@ -174,6 +174,13 @@ export const journals = [
       note: 'protestierten am Bundestag gegen Rechtsextremismus',
       roboIconSrc: 'https://robohash.org/Protest-Performance'
     }, 
+    {
+      id: '1706764206',
+      title: 'Satisfied',
+      date: '2024-02-01',
+      note: 'Satisfied conveying an dependent contented',
+      roboIconSrc: 'https://robohash.org/satisfied'
+    },
     {
       id: '1710532415',
       title: 'sweetness',
