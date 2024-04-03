@@ -40,13 +40,45 @@ const Home = ({
     });
   };
 
-  const data = selectLastHalfYear(journals)
-    .map((journal) => ({
-      date: journal.date,
-      count: 1, //count??
-      level: 2,
-    }))
+  const data = journals
+    .reduce((previousValue, currentValue) => {
+      const existingLog = previousValue.find(
+        (item) => item.date === currentValue.date
+      );
+      if (existingLog) {
+        existingLog.count += 1;
+        existingLog.level = getLevel(existingLog.count);
+      } else {
+        previousValue.push({
+          date: currentValue.date,
+          count: 1,
+          level: 1,
+        });
+      }
+      return previousValue;
+    }, [])
     .reverse();
+  function getLevel(count) {
+    if (count === 1) {
+      return 1;
+    } else if (count >= 1 && count <= 2) {
+      return 2;
+    } else if (count >= 3 && count <= 4) {
+      return 3;
+    } else if (count >= 5 && count <= 6) {
+      return 4;
+    } else {
+      return 5;
+    }
+  }
+
+  // const data = selectLastHalfYear(journals)
+  //   .map((journal) => ({
+  //     date: journal.date,
+  //     count: 1, //count??
+  //     level: 2,
+  //   }))
+  //   .reverse();
 
   return (
     <section className="section">

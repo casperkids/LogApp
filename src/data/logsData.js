@@ -33,6 +33,13 @@ export const journals = [
       date: '2024-03-19',
       note: ' Alteration connection to so as collecting me.',
       roboIconSrc: 'https://robohash.org/gate'
+    },
+        {
+      id: '1710885133',
+      title: 'Giorgia',
+      date: '2024-03-19',
+      note: 'Sohn beschuldigt albanische Drogenkuriere des Mordes an seiner Mutter',
+      roboIconSrc: 'https://robohash.org/Giorgia '
     }, 
     {
       id: '1710738616',
