@@ -139,13 +139,6 @@ export const journals = [
       note: 'Affronting discretion as do is announcing.',
       roboIconSrc: 'https://robohash.org/Sincerity'
     },
-    {
-      id: '1706764206',
-      title: 'Satisfied',
-      date: '2024-02-01',
-      note: 'Satisfied conveying an dependent contented',
-      roboIconSrc: 'https://robohash.org/satisfied'
-    },
         {
       id: '1707973806',
       title: 'direct two men',
@@ -174,6 +167,13 @@ export const journals = [
       note: 'protestierten am Bundestag gegen Rechtsextremismus',
       roboIconSrc: 'https://robohash.org/Protest-Performance'
     }, 
+    {
+      id: '1706764206',
+      title: 'Satisfied',
+      date: '2024-02-01',
+      note: 'Satisfied conveying an dependent contented',
+      roboIconSrc: 'https://robohash.org/satisfied'
+    },
     {
       id: '1710532415',
       title: 'sweetness',
