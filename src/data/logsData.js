@@ -1,4 +1,11 @@
 export const journals = [
+    {
+      id: '1711133533',
+      title: 'Protest-Performance',
+      date: '2024-03-22',
+      note: 'Taxifahrer wurden am Freitagabend zu Schauspielern: Sie protestierten gegen die Umbenennung des Mercedes-Platzes und der beiden Veranstaltungsorte in Berlin-Friedrichshain.',
+      roboIconSrc: 'https://robohash.org/Protest-Performance'
+    }, 
       {
       id: '1711810267',
       title: 'Read Me',
@@ -160,6 +167,13 @@ export const journals = [
       note: 'Excepteur sint occaecat cupidatat non proident',
       roboIconSrc: 'https://robohash.org/calender'
     },
+        {
+      id: '1706986333',
+      title: 'Demo in Berlin:',
+      date: '2024-02-03',
+      note: 'protestierten am Bundestag gegen Rechtsextremismus',
+      roboIconSrc: 'https://robohash.org/Protest-Performance'
+    }, 
     {
       id: '1710532415',
       title: 'sweetness',
