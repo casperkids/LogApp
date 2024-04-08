@@ -48,12 +48,17 @@ const Logs = ({ journals }) => {
                   width: "100px",
                   height: "100px",
                   borderRadius: "50%",
-                  border: "1px solid  #808080",
+                  border: "1px solid  #7a6643",
                   display: "block",
                   margin: "0 auto",
+                  background: "rgb(227,227,227)",
+                  backgroundImage:
+                    "linear-gradient(0deg, rgba(227,227,227,1) 35%, rgba(255,255,255,1) 100%)",
                 }}
               />
-              <Link to={`/logs/${journal.id}`}>{journal.title}</Link>{" "}
+              <Link to={`/logs/${journal.id}`} style={{ color: "#62a2ba" }}>
+                {journal.title}
+              </Link>{" "}
             </div>
           </Card>
         ))}
@@ -62,14 +67,21 @@ const Logs = ({ journals }) => {
         className="pagination"
         style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}
       >
-        <Button onClick={prevPage} disabled={currentPage === 1}>
+        <Button
+          onClick={prevPage}
+          disabled={currentPage === 1}
+          variant="secondary"
+        >
+          {" "}
           Previous Page
         </Button>
         <Button
           onClick={nextPage}
           disabled={endIndex >= journals.length}
           style={{ marginLeft: "10px" }}
+          variant="secondary"
         >
+          {" "}
           Next Page
         </Button>
       </div>

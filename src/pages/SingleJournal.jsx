@@ -1,20 +1,26 @@
 import { Link, useParams } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import JournalCard from "../components/journalCard.jsx";
-import { useState } from "react";
 
 const SingleJournal = ({ journals, updateJournal }) => {
   const { journalId } = useParams();
   const [editedTitle, setEditedTitle] = useState("");
   const [editedNote, setEditedNote] = useState("");
   const [isSaved, setIsSaved] = useState(false);
-  const journal = journals.find((journal) => journal.id === journalId);
+  const [originalJournal, setOriginalJournal] = useState(null);
+  const [isEditing, setIsEditing] = useState(false);
 
-  const handleEdit = () => {
+  useEffect(() => {
+    const journal = journals.find((journal) => journal.id === journalId);
+    setOriginalJournal(journal);
     setEditedTitle(journal.title);
     setEditedNote(journal.note);
+  }, [journals, journalId]);
+
+  const handleEdit = () => {
+    setIsEditing(true);
     setIsSaved(false);
   };
 
@@ -29,16 +35,21 @@ const SingleJournal = ({ journals, updateJournal }) => {
   };
 
   const handleSave = () => {
-    const updatedJournal = { ...journal, title: editedTitle, note: editedNote };
+    const updatedJournal = {
+      ...originalJournal,
+      title: editedTitle,
+      note: editedNote,
+    };
     updateJournal(updatedJournal);
     setIsSaved(true);
+    setIsEditing(false);
     console.log("Saving edited journal:", editedTitle, editedNote);
   };
 
   return (
     <section className="section">
       <Card style={{ width: "18rem" }}>
-        <Card.Text>{journal.date}</Card.Text>
+        <Card.Text>{originalJournal && originalJournal.date}</Card.Text>
         <div
           style={{
             display: "flex",
@@ -49,13 +60,13 @@ const SingleJournal = ({ journals, updateJournal }) => {
         >
           <Card.Img
             variant="top"
-            src={journal.roboIconSrc}
-            alt={journal.id}
+            src={originalJournal && originalJournal.roboIconSrc}
+            alt={originalJournal && originalJournal.id}
             style={{
               width: "150px",
               height: "150px",
               borderRadius: "50%",
-              border: "2px solid #000",
+              border: "2px solid #7a6643",
               display: "block",
               margin: "0 auto",
             }}
@@ -63,7 +74,7 @@ const SingleJournal = ({ journals, updateJournal }) => {
         </div>
         <Card.Body>
           <Card.Title>
-            {editedTitle ? (
+            {isEditing ? (
               <input
                 type="text"
                 value={editedTitle}
@@ -75,14 +86,14 @@ const SingleJournal = ({ journals, updateJournal }) => {
                 }}
               />
             ) : (
-              journal.title
+              originalJournal && originalJournal.title
             )}
           </Card.Title>
           <Card.Text>
-            {editedNote ? (
+            {isEditing ? (
               <textarea value={editedNote} onChange={handleChangeNote} />
             ) : (
-              journal.note
+              originalJournal && originalJournal.note
             )}
           </Card.Text>
           <div>
@@ -107,8 +118,11 @@ const SingleJournal = ({ journals, updateJournal }) => {
             </div>
           </div>
         </Card.Body>
+
         <div>
-          <Link to="/logs">back to Logs</Link>{" "}
+          <Link to="/logs" style={{ color: "#62a2ba" }}>
+            back to Logs
+          </Link>{" "}
         </div>
       </Card>
     </section>

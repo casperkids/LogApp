@@ -3,7 +3,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
- --react-tooltip-background: red;
+
+
 }
 .navbar {
   font-family: "Kode Mono", monospace;
@@ -16,6 +17,11 @@
   font-style: normal;
   color: #49514d;
 }
+.home-h2_titile{
+  padding-top: 50px;
+  color: rgb(98, 162, 186);
+}
+
 .fixed-header {
   position: fixed;
   top: 0;
@@ -44,7 +50,6 @@
   color:#f8a13a ;
 }
 .recent-entry-container {
-
   padding: 70px;
 }
 
@@ -56,14 +61,19 @@
 }
 .form-container {
   background-color:#b9b087; 
-  padding: 5%; 
+  padding: 3%;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 30px;  
 }
-
-
 .card {
   padding: 2em;
 }
-
 
 .form-group {
   font-family: "Kode Mono", monospace;
@@ -78,7 +88,15 @@
   margin-bottom: 15px;
   width: 540px;
   margin: 0 auto;
-
+}
+.centered-form {
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  height: 100%;
+  /* Optional: Make the container take up the full viewport height */
 }
 /* Style for placeholder text */
 .centered-form textarea {
@@ -90,8 +108,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  background-color: aquamarine;
 }
 .centeredDate{
   text-align: center; /* Center text horizontally */
@@ -106,4 +122,11 @@ margin-left: 10px;
 .success_txt{
   color: #f8a13a;
   padding-top: 20px;
+}
+.notearea::placeholder {
+  color: #d4d2d2;
+}
+
+.journal-title .LogSingle-link:hover {
+  color: #ff0000;
 }

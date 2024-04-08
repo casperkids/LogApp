@@ -6,6 +6,7 @@ import { journals } from "../data/logsData.js";
 import ActivityCalendar from "react-activity-calendar";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
+import Card from "react-bootstrap/Card";
 
 const Home = ({
   currentDate,
@@ -72,14 +73,6 @@ const Home = ({
     }
   }
 
-  // const data = selectLastHalfYear(journals)
-  //   .map((journal) => ({
-  //     date: journal.date,
-  //     count: 1, //count??
-  //     level: 2,
-  //   }))
-  //   .reverse();
-
   return (
     <section className="section">
       <div className="calender_container">
@@ -99,7 +92,7 @@ const Home = ({
         />
       </div>
 
-      <div className="centered-form form-container">
+      <div className="centered-form form-container d-flex justify-content-center align-items-center">
         <Form onSubmit={(event) => handleAddJournal(event)}>
           <div className="form-group">
             <label>Date</label>
@@ -118,7 +111,7 @@ const Home = ({
             <label>Write about your day</label>
             <div>
               <textarea
-                className="form-control"
+                className="form-control notearea"
                 style={{ width: "100%" }}
                 rows={5}
                 value={note}
@@ -182,10 +175,13 @@ const Home = ({
       </div>
 
       <div className="recent-entry-container">
-        <h5>Recent Entries</h5>
+        <h2 className="home-h2_titile">Recent Entries</h2>
+
         <div className="d-flex justify-content-between">
           {topJournals.map((topJournal) => (
-            <JournalCard key={topJournal.id} journal={topJournal} />
+            <div key={topJournal.id} className="align-items-center">
+              <JournalCard journal={topJournal} />
+            </div>
           ))}
         </div>
       </div>

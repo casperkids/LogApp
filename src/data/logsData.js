@@ -189,6 +189,41 @@ export const journals = [
       roboIconSrc: 'https://robohash.org/sweetness'
     },
                 {
+      id: '1706397644',
+      title: 'Aus dem Nichts',
+      date: '2024-01-27',
+      note: 'Fischers Tränen zum Abschied',
+      roboIconSrc: 'https://robohash.org/Aus dem Nichts'
+    },
+            {
+      id: '1706390444',
+      title: '10 Fragen',
+      date: '2024-01-27',
+      note: 'Schaffst du 90 Prozent, ist dein Allgemeinwissen exzellent',
+      roboIconSrc: 'https://robohash.org/10 Fragen'
+    },
+        {
+      id: '1706379644',
+      title: 'Straßenkampf',
+      date: '2024-01-27',
+      note: 'Straßenkampf der Künste in Manhattan',
+      roboIconSrc: 'https://robohash.org/Straßenkampf'
+    },
+    {
+      id: '1706343644',
+      title: 'Spiel unterbrochen ',
+      date: '2024-01-27',
+      note: 'Ein harter Schuss trifft den Schiedsrichter-Assistenten in Wolfsburg so unglücklich',
+      roboIconSrc: 'https://robohash.org/Spiel unterbrochen'
+    },
+        {
+      id: '1706332844',
+      title: 'Bayern freut sich',
+      date: '2024-01-27',
+      note: 'Der Vorsprung von Bayer Leverkusen auf den FC Bayern beträgt nur noch zwei Punkte. ',
+      roboIconSrc: 'https://robohash.org/Bayern freut sich'
+    },
+    {
       id: '1705313161',
       title: 'Extra log',
       date: '2024-01-15',

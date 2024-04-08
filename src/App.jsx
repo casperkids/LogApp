@@ -9,6 +9,7 @@ import "./App.css";
 import SingleJournal from "./pages/SingleJournal.jsx";
 import Home from "./pages/Home.jsx";
 import Logs from "./pages/Logs.jsx";
+import Error from "./pages/Error.jsx";
 import SharedLayout from "./pages/SharedLayout.jsx";
 
 const currentDate = new Date().toLocaleDateString();
@@ -26,12 +27,9 @@ function App() {
     );
     setJournals(updatedJournals);
   };
-  // const [showSingleJournal, setShowSingleJournal] = useState(false);
-  // const [selectedJournal, setSelectedJournal] = useState(null);
 
   const generateRoboIcon = () => {
     const input = encodeURIComponent(title);
-    // const img = document.createElement('img')
     const options = {
       set: "set1",
       bgset: "bg1",
@@ -79,7 +77,7 @@ function App() {
 
   return (
     <BrowserRouter basename="/LogApp">
-      <nav>NavBar</nav>
+      <nav></nav>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route
