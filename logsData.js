@@ -1,5 +1,12 @@
 export const journals = [
     {
+      id: '1711133333',
+      title: 'Kohlekraftwerke',
+      date: '2024-04-01',
+      note: 'Insgesamt 15 Kohlekraftwerke wurden zum Ostermontag dauerhaft stillgelegt.',
+      roboIconSrc: 'https://robohash.org/Protest-Kohlekraftwerke'
+    }, 
+    {
       id: '1711133533',
       title: 'Protest-Performance',
       date: '2024-03-22',
